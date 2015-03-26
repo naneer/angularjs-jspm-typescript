@@ -24,5 +24,4 @@ http.createServer(server)
     })
     .on('listening', function(){
         console.log('Started web server on http:/localhost:' + options.port);
-    })
-});
+    });
