@@ -7,15 +7,26 @@ var url = require('url');
 
 var connect = require('connect');
 var serveStatic = require('serve-static');
+var send = require('send');
 var argv = require('minimist')(process.argv.slice(2));
 
 var options = {
   port: argv.p || argv.port,
-  root: argv.r || argv.root
+  root: argv.r || argv.root,
+  index: argv.index || 'index.html'
 };
 
 var server = connect()
-    .use(serveStatic(options.root));
+  .use(function serveOverrideIndex(req, res, next) { // overrides index to what is set from the arguments --index=app.html
+    if (options.index !== 'index.html' &&
+        url.parse(req.url).pathname.match(/^(\/|\/index.html)$/)) {
+      send(req, '/' + options.index, { root: options.root })
+        .pipe(res);
+    } else {
+      next();
+    }
+  })
+  .use(serveStatic(options.root));
 
 
 http.createServer(server)
