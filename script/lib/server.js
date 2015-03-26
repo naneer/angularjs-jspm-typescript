@@ -7,7 +7,12 @@ var url = require('url');
 
 var connect = require('connect');
 var serveStatic = require('serve-static');
+var argv = require('minimist')(process.argv.slice(2));
 
+var options = {
+  port: argv.p || argv.port,
+  root: argv.r || argv.root
+};
 
 var server = connect()
     .use(serveStatic(options.root));
