@@ -1,0 +1,9 @@
+{
+  "jspm": {
+    "directories": {
+      "baseURL": "app",
+      "lib": "app/lib",
+      "packages": "app/jspm_packages"
+    }
+  }
+}
