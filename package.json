@@ -4,6 +4,9 @@
       "baseURL": "app",
       "lib": "app/lib",
       "packages": "app/jspm_packages"
+    },
+    "dependencies": {
+      "angular": "github:angular/bower-angular@^1.3.15"
     }
   }
 }
