@@ -2,7 +2,8 @@ System.config({
   "baseURL": "/",
   "paths": {
     "*": "*.js",
-    "github:*": "jspm_packages/github/*.js"
+    "github:*": "jspm_packages/github/*.js",
+    "npm:*": "jspm_packages/npm/*.js"
   }
 });
 
