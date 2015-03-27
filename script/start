@@ -1,6 +1,7 @@
 #!/bin/bash
 # Usage: script/start
 # Starts the project's development server.
+# not used in Nitrous Build
 
 set -e errexit
 
