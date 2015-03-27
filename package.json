@@ -4,7 +4,7 @@
   "version": "0.0.1-pre",
   "description": "jspm angularjs boilerplate",
   "scripts": {
-    "start": "./script/start"
+    "start": "node ./script/lib/server.js --port=3000 --verbose --root ./app"
   },
   "jspm": {
     "directories": {
