@@ -5,7 +5,7 @@ import {homeIndexRouteModule} from './index/home-index.route';
 
 export var homeRouteModule = angular.module('homeRouteModule', [
     'ui.router',
-    homeIndexRoute.Module.name
+    homeIndexRouteModule.name
 ]).config([
     '$stateProvider',
     function homeRoute($stateProvider) {
