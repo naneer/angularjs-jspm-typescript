@@ -10,7 +10,6 @@ export var mainConfigModule = angular.module('mainConfigModule', [
         
         $urlRouterProvider.rule(function($injector, $location){
             var path = $location.path();
-            console.log("path is",path);
             if (path !== '/' && path.slice(-1) === '/') {
                 $location.replace().path(path.slice(0,-1));
             }
