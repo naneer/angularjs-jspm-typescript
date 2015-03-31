@@ -1,6 +1,6 @@
 ///<reference path="../typings/tsd.d.ts" />
 import angular = require('angular');
-import Animal = require('./main');
+import Animal = require('./sub/main');
 import module = require('./mainmodule');
 console.log(Animal);
 console.log(module);
