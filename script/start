@@ -7,4 +7,4 @@ set -e errexit
 
 tsc ./src/mainmodule.ts ./src/main.ts ./src/bootstrap.ts --module AMD --outDir ./app/lib
 
-node ./script/lib/server.js --port=3000 --verbose --root ./app
+node ./script/lib/server.js --port=4000 --verbose --root ./app
