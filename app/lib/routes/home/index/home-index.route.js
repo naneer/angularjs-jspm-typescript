@@ -4,7 +4,7 @@ import 'angular-ui-router';
 import template from './home-index.template.html!text';
 
 export var homeIndexRouteModule = angular.module('homeIndexRouteModule', [
-    'ui.router' 
+    'ui.router'
 ]).config([
     '$stateProvider',
     function homeRoute($stateProvider) {
