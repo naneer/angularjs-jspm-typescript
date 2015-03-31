@@ -1,2 +1,5 @@
 app/jspm_packages
+app/lib/
 node_modules
+typings/
+npm-debug.log
