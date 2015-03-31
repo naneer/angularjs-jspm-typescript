@@ -1,0 +1,12 @@
+#!/bin/bash
+# Usage: script/start
+# Starts the project's development server.
+# not used in Nitrous Build
+
+// stops script on errors
+set -e errexit
+
+// checks in src dir for all ts files and transpiles them
+find ./test -name '*.ts' -type f > testsc.txt
+tsc @testsc.txt --module AMD --outDir ./app/lib
+rm testsc.txt
