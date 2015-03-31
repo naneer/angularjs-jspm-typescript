@@ -3,10 +3,13 @@
 # Starts the project's development server.
 # not used in Nitrous Build
 
+// stops script on errors
 set -e errexit
 
+// checks in src dir for all ts files and transpiles them
 find ./src -name '*.ts' -type f > tsc.txt
 tsc @tsc.txt --module AMD --outDir ./app/lib
 rm tsc.txt
 
+// starts connect http server
 node ./script/lib/server.js --port=3000 --verbose --root ./app
