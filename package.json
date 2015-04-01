@@ -4,7 +4,8 @@
   "version": "0.0.1-pre",
   "description": "jspm angularjs boilerplate",
   "scripts": {
-    "start": "bash ./script/start"
+    "start": "bash ./script/start",
+    "test": "bash ./script/test"
   },
   "jspm": {
     "directories": {
