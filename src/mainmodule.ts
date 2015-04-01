@@ -3,6 +3,8 @@
 import angular = require('angular');
 
 import testController = require('./testcontroller');
+
+
 var mainModule = angular.module('mainModule', ['ui.router']);
   mainModule.controller(testController);
 
