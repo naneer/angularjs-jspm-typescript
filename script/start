@@ -7,7 +7,7 @@
 set -e errexit
 
 # start by removing existing files in the app/lib
-rm -r app/lib/*
+rm -rf app/lib/*
 
 # checks in src dir for all ts files and transpiles them
 find ./src -name '*.ts' -type f > tsc.txt
